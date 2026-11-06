@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anisur Rahman | Web Developer</title>
+  <meta name="description" content="Anisur Rahman - JavaScript web developer. Creator of iConnecto." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a href="#home" class="logo">&lt;AR /&gt;</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <p class="hello">Hi, I'm</p>
+      <h1>Anisur Rahman</h1>
+      <h2><span id="typed"></span><span class="cursor">|</span></h2>
+      <p class="lead">আমি JavaScript দিয়ে ওয়েব অ্যাপ ও ওয়েবসাইট বানাই। আমার নিজের প্রজেক্ট iConnecto নিয়ে কাজ করছি।</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">আমার কাজ দেখুন</a>
+        <a class="btn" href="#contact">যোগাযোগ করুন</a>
+      </div>
+    </section>
+
+    <section id="about" class="reveal">
+      <h3 class="title">About</h3>
+      <p>আমি Anisur Rahman, একজন web developer। JavaScript আমার প্রধান ভাষা। নতুন আইডিয়াকে কাজের প্রোডাক্টে রূপ দিতে আমার ভালো লাগে। বর্তমানে আমি iConnecto নামে একটা প্রজেক্ট নিয়ে কাজ করছি।</p>
+    </section>
+
+    <section id="skills" class="reveal">
+      <h3 class="title">Skills</h3>
+      <div class="chips">
+        <span>JavaScript</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>Git &amp; GitHub</span>
+      </div>
+      <p class="note">নিজের skill অনুযায়ী এই তালিকা index.html এ বদলে নিন।</p>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h3 class="title">Projects</h3>
+      <div class="cards">
+        <article class="card">
+          <h4>iConnecto</h4>
+          <p>আমার নিজের তৈরি প্রজেক্ট। মানুষকে একে অপরের সাথে যুক্ত করার একটা প্ল্যাটফর্ম।</p>
+          <div class="tags"><span>JavaScript</span><span>Web</span></div>
+          <!-- নিচের লিংকে iConnecto এর আসল ঠিকানা বসান -->
+          <a class="btn primary small" id="iconnectoLink" href="https://anisurrahmantanvi.github.io/iconnecto-website/about/" target="_blank" rel="noopener">iConnecto দেখুন →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <h3 class="title">Contact</h3>
+      <p>কাজের জন্য বা শুধু কথা বলতে লিখুন।</p>
+      <form id="contactForm">
+        <input type="text" id="name" placeholder="আপনার নাম" required />
+        <input type="email" id="email" placeholder="আপনার ইমেইল" required />
+        <textarea id="message" rows="5" placeholder="বার্তা" required></textarea>
+        <button class="btn primary" type="submit">পাঠান</button>
+      </form>
+      <div class="links">
+        <!-- নিচের লিংকগুলো নিজের দিয়ে বদলান -->
+        <a href="https://github.com/anisurrahmantanvi" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:YOUR-EMAIL@example.com">Email</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Anisur Rahman</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
