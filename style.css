@@ -105,3 +105,86 @@ footer { text-align: center; color: var(--muted); padding: 60px 0 30px; font-siz
   .nav nav { gap: 12px; }
   .nav nav a { font-size: 0.85rem; }
 }
+
+/* ================= Showcase: Meet iConnecto ================= */
+.showcase {
+  position: relative; overflow: hidden;
+  min-height: calc(100vh - 57px); min-height: calc(100svh - 57px);
+  display: grid; place-items: center;
+  background: radial-gradient(ellipse at 50% 45%, #15191f 0%, #07090c 70%);
+  color: #fff; isolation: isolate;
+}
+.contours {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  color: rgba(255, 255, 255, 0.13); z-index: 0;
+}
+.ring-a, .ring-b { transform-origin: 400px 400px; transform-box: view-box; }
+.ring-a { animation: spin 70s linear infinite; }
+.ring-b { animation: spin 110s linear infinite reverse; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.phone {
+  position: relative; z-index: 2;
+  width: min(270px, 64vw, 32vh); aspect-ratio: 9 / 18.6;
+  border-radius: 14% / 6.8%;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+  animation: float 6s ease-in-out infinite;
+}
+/* Silver bezel ring only (screen stays transparent so the text shows through) */
+.phone::before {
+  content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 6px;
+  background: linear-gradient(145deg, #f4f4f6, #8c8f96 40%, #e9eaee 60%, #6f7279);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor; mask-composite: exclude;
+}
+.phone::after {
+  content: ""; position: absolute; inset: 6px; border-radius: calc(14% - 4px) / calc(6.8% - 4px);
+  box-shadow: inset 0 0 0 2px #000; pointer-events: none;
+}
+@keyframes float { 50% { transform: translateY(-10px); } }
+.island {
+  position: absolute; top: 2.4%; left: 50%; transform: translateX(-50%);
+  width: 32%; height: 3.4%; background: #000; border-radius: 999px;
+}
+.screen {
+  position: absolute; inset: 0; padding: 9% 8% 7%;
+  display: flex; flex-direction: column; justify-content: space-between;
+  border-radius: inherit; overflow: hidden;
+}
+.app-top { display: flex; align-items: center; gap: 8px; margin-top: 6%; }
+.app-logo {
+  width: 26px; height: 26px; border-radius: 8px; display: grid; place-items: center;
+  font: 700 11px/1 system-ui, sans-serif; color: #04130a;
+  background: linear-gradient(135deg, #f7b6c2, #9db7f5);
+}
+.app-name { font: 600 13px/1 system-ui, sans-serif; opacity: .9; }
+.app-list { display: grid; gap: 10px; }
+.row { display: flex; align-items: center; gap: 10px; padding: 9px; border-radius: 12px; background: rgba(255,255,255,.07); }
+.row i { width: 28px; height: 28px; border-radius: 50%; background: linear-gradient(135deg, #f7b6c2, #9db7f5); flex: none; }
+.row b { height: 8px; flex: 1; border-radius: 6px; background: rgba(255,255,255,.22); }
+.row:nth-child(2) b { max-width: 70%; }
+.row:nth-child(3) b { max-width: 50%; }
+
+/* Text sits behind the phone's bezel but shows through the screen */
+.meet {
+  position: absolute; z-index: 1; left: 0; right: 0; top: 50%;
+  transform: translateY(-50%); text-align: center; white-space: nowrap;
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: clamp(2.3rem, 12.5vw, 5.4rem); font-weight: 700; letter-spacing: -0.02em;
+  background: linear-gradient(90deg, #f7b6c2 0%, #d6b8e8 45%, #9db7f5 100%);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+  -webkit-text-fill-color: transparent;
+  opacity: 0; filter: blur(8px); animation: meetIn 1.1s .15s ease forwards;
+}
+@keyframes meetIn { to { opacity: 1; filter: blur(0); } }
+
+.scroll-hint {
+  position: absolute; bottom: 22px; left: 50%; transform: translateX(-50%);
+  z-index: 3; font-size: .85rem; color: rgba(255,255,255,.6);
+}
+.scroll-hint:hover { color: #fff; }
+
+@media (prefers-reduced-motion: reduce) {
+  .ring-a, .ring-b, .phone { animation: none; }
+  .meet { animation: none; opacity: 1; filter: none; }
+}
