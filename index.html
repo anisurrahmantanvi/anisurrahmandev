@@ -1,25 +1,32 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anisur Rahman | Web Developer</title>
-  <meta name="description" content="Anisur Rahman - JavaScript web developer. Creator of iConnecto." />
+  <title>Anisur Rahman | Founder of iConnecto</title>
+  <meta name="description" content="Anisur Rahman is the founder of iConnecto. He turns ideas into real products, building with AI." />
+  <meta property="og:title" content="Anisur Rahman | Founder of iConnecto" />
+  <meta property="og:description" content="Turning ideas into real products, building with AI." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#07090c" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="progress" id="progress" aria-hidden="true"></div>
+  <div class="glow" id="glow" aria-hidden="true"></div>
+
   <header class="nav">
-    <a href="#home" class="logo">&lt;AR /&gt;</a>
-    <nav>
+    <a href="#home" class="logo" aria-label="Home">AR</a>
+    <nav aria-label="Main">
       <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
+      <a href="#work">Work</a>
+      <a href="#process">Process</a>
       <a href="#contact">Contact</a>
-      <button id="themeToggle" aria-label="Toggle theme">🌙</button>
     </nav>
+    <button id="themeToggle" class="theme" aria-label="Toggle dark or light theme">🌙</button>
   </header>
 
-  <!-- Showcase: animated contour lines + phone + "Meet iConnecto" -->
+  <!-- ============ Showcase: Meet iConnecto ============ -->
   <section id="home" class="showcase" aria-label="Meet iConnecto">
     <svg class="contours" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
       <defs>
@@ -46,7 +53,7 @@
       </g>
     </svg>
 
-    <h2 class="meet" id="meetText">Meet iConnecto</h2>
+    <h1 class="meet">Meet iConnecto</h1>
 
     <div class="phone" aria-hidden="true">
       <span class="island"></span>
@@ -63,69 +70,116 @@
       </div>
     </div>
 
-    <a class="scroll-hint" href="#intro">নিচে স্ক্রল করুন ↓</a>
+    <a class="scroll-hint" href="#intro"><span>Scroll</span><i></i></a>
   </section>
 
+  <!-- ============ Marquee ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Ideas</span><em>✦</em><span>Product</span><em>✦</em><span>Design</span><em>✦</em><span>AI</span><em>✦</em><span>Web</span><em>✦</em><span>iConnecto</span><em>✦</em>
+      <span>Ideas</span><em>✦</em><span>Product</span><em>✦</em><span>Design</span><em>✦</em><span>AI</span><em>✦</em><span>Web</span><em>✦</em><span>iConnecto</span><em>✦</em>
+    </div>
+  </div>
+
   <main>
-    <section id="intro" class="hero">
-      <p class="hello">Hi, I'm</p>
-      <h1>Anisur Rahman</h1>
-      <h2><span id="typed"></span><span class="cursor">|</span></h2>
-      <p class="lead">আমি JavaScript দিয়ে ওয়েব অ্যাপ ও ওয়েবসাইট বানাই। আমার নিজের প্রজেক্ট iConnecto নিয়ে কাজ করছি।</p>
-      <div class="actions">
-        <a class="btn primary" href="#projects">আমার কাজ দেখুন</a>
-        <a class="btn" href="#contact">যোগাযোগ করুন</a>
+    <!-- ============ Intro ============ -->
+    <section id="intro" class="intro">
+      <p class="eyebrow reveal">Hi, I'm Anisur Rahman</p>
+      <h2 class="role reveal" style="--d:.08s"><span id="typed"></span><span class="cursor">|</span></h2>
+      <p class="statement split" id="statement">I turn ideas into real products. Right now I'm building iConnecto, a social app made to bring people closer.</p>
+      <div class="actions reveal" style="--d:.15s">
+        <a class="btn primary" href="#work">See my work</a>
+        <a class="btn" href="#contact">Get in touch</a>
       </div>
     </section>
 
-    <section id="about" class="reveal">
-      <h3 class="title">About</h3>
-      <p>আমি Anisur Rahman, একজন web developer। JavaScript আমার প্রধান ভাষা। নতুন আইডিয়াকে কাজের প্রোডাক্টে রূপ দিতে আমার ভালো লাগে। বর্তমানে আমি iConnecto নামে একটা প্রজেক্ট নিয়ে কাজ করছি।</p>
-    </section>
-
-    <section id="skills" class="reveal">
-      <h3 class="title">Skills</h3>
-      <div class="chips">
-        <span>JavaScript</span>
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>Git &amp; GitHub</span>
+    <!-- ============ About ============ -->
+    <section id="about" class="block">
+      <p class="eyebrow reveal">01 · About</p>
+      <h2 class="h2 reveal" style="--d:.05s">A founder who builds with AI.</h2>
+      <div class="about-grid">
+        <p class="reveal" style="--d:.1s">I'm a founder and product thinker. I'm not a traditional programmer. I take an idea, shape it, and use modern AI tools to turn it into a working website or app.</p>
+        <p class="reveal" style="--d:.18s">I care about simple, honest products that people actually enjoy using. iConnecto is the first one I'm taking from idea to launch, and I share the progress right here.</p>
       </div>
-      <p class="note">নিজের skill অনুযায়ী এই তালিকা index.html এ বদলে নিন।</p>
     </section>
 
-    <section id="projects" class="reveal">
-      <h3 class="title">Projects</h3>
-      <div class="cards">
-        <article class="card">
-          <h4>iConnecto</h4>
-          <p>আমার নিজের তৈরি প্রজেক্ট। মানুষকে একে অপরের সাথে যুক্ত করার একটা প্ল্যাটফর্ম।</p>
-          <div class="tags"><span>JavaScript</span><span>Web</span></div>
-          <!-- নিচের লিংকে iConnecto এর আসল ঠিকানা বসান -->
-          <a class="btn primary small" id="iconnectoLink" href="https://anisurrahmantanvi.github.io/iconnecto-website/about/" target="_blank" rel="noopener">iConnecto দেখুন →</a>
+    <!-- ============ What I do ============ -->
+    <section id="skills" class="block">
+      <p class="eyebrow reveal">02 · What I do</p>
+      <h2 class="h2 reveal" style="--d:.05s">From first idea to live product.</h2>
+      <div class="cards three">
+        <article class="card tilt reveal" style="--d:.05s">
+          <span class="num">01</span>
+          <h3>Product ideas</h3>
+          <p>I find a real problem, define who it's for, and decide what the first version should (and should not) do.</p>
+        </article>
+        <article class="card tilt reveal" style="--d:.15s">
+          <span class="num">02</span>
+          <h3>Building with AI</h3>
+          <p>I work with AI tools to design screens, write code and fix problems, so ideas become working software quickly.</p>
+        </article>
+        <article class="card tilt reveal" style="--d:.25s">
+          <span class="num">03</span>
+          <h3>Launch &amp; improve</h3>
+          <p>I put things online early, listen to feedback, and keep improving step by step.</p>
         </article>
       </div>
     </section>
 
-    <section id="contact" class="reveal">
-      <h3 class="title">Contact</h3>
-      <p>কাজের জন্য বা শুধু কথা বলতে লিখুন।</p>
-      <form id="contactForm">
-        <input type="text" id="name" placeholder="আপনার নাম" required />
-        <input type="email" id="email" placeholder="আপনার ইমেইল" required />
-        <textarea id="message" rows="5" placeholder="বার্তা" required></textarea>
-        <button class="btn primary" type="submit">পাঠান</button>
+    <!-- ============ Work ============ -->
+    <section id="work" class="block">
+      <p class="eyebrow reveal">03 · Work</p>
+      <h2 class="h2 reveal" style="--d:.05s">What I'm building.</h2>
+      <article class="feature card tilt reveal" style="--d:.1s">
+        <div class="feature-text">
+          <span class="badge">In progress</span>
+          <h3>iConnecto</h3>
+          <p>A social app that helps people connect. My main project, built with AI and improved a little every week.</p>
+          <div class="tags"><span>Social</span><span>Web</span><span>AI-assisted</span></div>
+          <a class="btn primary" id="iconnectoLink" href="https://anisurrahmantanvi.github.io/iconnecto-website/about/" target="_blank" rel="noopener">Visit iConnecto <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="feature-visual" aria-hidden="true">
+          <div class="mini-phone">
+            <span class="app-logo big">iC</span>
+            <div class="bars"><b></b><b></b><b></b></div>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- ============ Process ============ -->
+    <section id="process" class="block">
+      <p class="eyebrow reveal">04 · Process</p>
+      <h2 class="h2 reveal" style="--d:.05s">How I work.</h2>
+      <ol class="timeline" id="timeline">
+        <li class="reveal"><span class="dot"></span><h3>Discover</h3><p>Understand the problem and the people who have it.</p></li>
+        <li class="reveal"><span class="dot"></span><h3>Design</h3><p>Sketch simple screens and a clear user flow.</p></li>
+        <li class="reveal"><span class="dot"></span><h3>Build</h3><p>Create a first working version with AI tools.</p></li>
+        <li class="reveal"><span class="dot"></span><h3>Evolve</h3><p>Launch, learn from feedback, and improve.</p></li>
+      </ol>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section id="contact" class="block contact">
+      <p class="eyebrow reveal">05 · Contact</p>
+      <h2 class="h2 big reveal" style="--d:.05s">Let's talk.</h2>
+      <p class="reveal" style="--d:.1s">Have an idea, a question or just want to say hello? Send me a message.</p>
+      <form id="contactForm" class="reveal" style="--d:.15s">
+        <input type="text" id="name" placeholder="Your name" autocomplete="name" required />
+        <input type="email" id="email" placeholder="Your email" autocomplete="email" required />
+        <textarea id="message" rows="5" placeholder="Your message" required></textarea>
+        <button class="btn primary" type="submit">Send message</button>
       </form>
-      <div class="links">
-        <!-- নিচের লিংকগুলো নিজের দিয়ে বদলান -->
+      <div class="links reveal" style="--d:.2s">
         <a href="https://github.com/anisurrahmantanvi" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:tanvibro@outlook.com">Email</a>
+        <a href="mailto:tanvibro@outlook.com">tanvibro@outlook.com</a>
       </div>
     </section>
   </main>
 
   <footer>
     <p>© <span id="year"></span> Anisur Rahman</p>
+    <a href="#home">Back to top ↑</a>
   </footer>
 
   <script src="script.js"></script>
