@@ -55,7 +55,7 @@ document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
 // ---------- Contact form (opens the visitor's email app) ----------
 // নিচের ইমেইল ঠিকানাটা নিজের দিয়ে বদলান
-const MY_EMAIL = "YOUR-EMAIL@example.com";
+const MY_EMAIL = "tanvibro@outlook.com";
 
 document.getElementById("contactForm").addEventListener("submit", (e) => {
   e.preventDefault();
