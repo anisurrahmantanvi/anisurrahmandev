@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,124 +8,145 @@
   <meta property="og:title" content="Anisur Rahman | Founder of iConnecto" />
   <meta property="og:description" content="Turning ideas into real products, building with AI." />
   <meta property="og:type" content="website" />
-  <meta name="theme-color" content="#0b0a09" />
+  <meta name="theme-color" content="#fafaf9" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="progress" id="progress" aria-hidden="true"></div>
 
   <header class="nav">
-    <a href="#home" class="logo" aria-label="Home">Anisur Rahman</a>
+    <a href="#home" class="logo" aria-label="Home"><span class="mark">AR</span><span class="name">Anisur Rahman</span></a>
     <nav aria-label="Main">
       <a href="#about">About</a>
       <a href="#work">Work</a>
       <a href="#process">Process</a>
-      <a href="#contact">Contact</a>
+      <a href="#contact" class="pill">Contact</a>
     </nav>
-    <button id="themeToggle" class="theme" aria-label="Toggle dark or ivory theme"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg></button>
+    <button id="themeToggle" class="theme" aria-label="Toggle light or dark theme"></button>
   </header>
 
   <!-- ============ Hero ============ -->
   <section id="home" class="hero">
-    <div class="hero-inner">
-      <p class="kicker rise" style="--d:.1s">Founder &middot; iConnecto</p>
-      <h1 class="rise" style="--d:.25s">Anisur<br />Rahman</h1>
-      <span class="rule rise" style="--d:.5s" aria-hidden="true"></span>
-      <p class="lead rise" style="--d:.65s">I turn ideas into real products. Right now I am building iConnecto, a social app made to bring people closer.</p>
-      <div class="actions rise" style="--d:.8s">
-        <a class="btn solid" href="#work">View my work</a>
-        <a class="btn" href="#contact">Get in touch</a>
+    <div class="blob b1" aria-hidden="true"></div>
+    <div class="blob b2" aria-hidden="true"></div>
+    <div class="hero-grid">
+      <div class="hero-text">
+        <p class="chip rise" style="--d:.05s"><span class="dot"></span>Building iConnecto</p>
+        <h1 class="rise" style="--d:.15s">Hi, I'm Anisur Rahman.<br /><span class="soft">I turn ideas into real products.</span></h1>
+        <p class="lead rise" style="--d:.3s">Founder and product thinker. I use AI to build simple, honest apps that bring people closer.</p>
+        <div class="actions rise" style="--d:.42s">
+          <a class="btn solid" href="#work">See my work</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+      <div class="hero-visual rise" style="--d:.3s" aria-hidden="true">
+        <div class="phone">
+          <span class="island"></span>
+          <div class="screen">
+            <div class="app-top"><span class="app-logo">iC</span><span class="app-name">iConnecto</span></div>
+            <div class="app-list">
+              <div class="row"><i></i><b></b></div>
+              <div class="row"><i></i><b></b></div>
+              <div class="row"><i></i><b></b></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <a class="scroll-hint" href="#about" aria-label="Scroll down"><i></i></a>
   </section>
 
   <main>
     <!-- ============ About ============ -->
     <section id="about" class="block">
-      <header class="head reveal">
-        <span class="numeral">I</span>
-        <div><p class="eyebrow">About</p><h2>A founder who builds with AI.</h2></div>
-      </header>
+      <p class="eyebrow reveal">About</p>
+      <h2 class="reveal" style="--d:.05s">A founder who builds with AI.</h2>
       <div class="about-grid">
-        <p class="reveal drop" style="--d:.1s">I am a founder and product thinker. I am not a traditional programmer. I take an idea, shape it, and use modern AI tools to turn it into a working website or app.</p>
-        <p class="reveal" style="--d:.2s">I care about simple, honest products that people actually enjoy using. iConnecto is the first one I am taking from idea to launch, and I share the progress right here.</p>
+        <p class="reveal" style="--d:.1s">I am a founder and product thinker. I am not a traditional programmer. I take an idea, shape it, and use modern AI tools to turn it into a working website or app.</p>
+        <p class="reveal" style="--d:.18s">I care about simple, honest products that people actually enjoy using. iConnecto is the first one I am taking from idea to launch, and I share the progress right here.</p>
       </div>
     </section>
 
     <!-- ============ What I do ============ -->
     <section id="skills" class="block">
-      <header class="head reveal">
-        <span class="numeral">II</span>
-        <div><p class="eyebrow">What I do</p><h2>From first idea to live product.</h2></div>
-      </header>
-      <ul class="rows">
-        <li class="reveal" style="--d:.05s">
-          <span class="idx">01</span>
+      <p class="eyebrow reveal">What I do</p>
+      <h2 class="reveal" style="--d:.05s">From first idea to live product.</h2>
+      <div class="cards three">
+        <article class="card reveal" style="--d:.05s">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>
+          </span>
           <h3>Product ideas</h3>
           <p>I find a real problem, define who it is for, and decide what the first version should (and should not) do.</p>
-        </li>
-        <li class="reveal" style="--d:.1s">
-          <span class="idx">02</span>
+        </article>
+        <article class="card reveal" style="--d:.12s">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.8 4.7L18.5 9.5l-4.7 1.8L12 16l-1.8-4.7L5.5 9.5l4.7-1.8z"/><path d="M19 15l.7 1.8 1.8.7-1.8.7L19 20l-.7-1.8-1.8-.7 1.8-.7z"/></svg>
+          </span>
           <h3>Building with AI</h3>
           <p>I work with AI tools to design screens, write code and fix problems, so ideas become working software quickly.</p>
-        </li>
-        <li class="reveal" style="--d:.15s">
-          <span class="idx">03</span>
+        </article>
+        <article class="card reveal" style="--d:.19s">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19c.5-4 2.5-7.5 6-10l4-3 3 3-3 4c-2.500 3.500-6 5.500-10 6z"/><path d="M14 10a1 1 0 1 0 0 .01"/></svg>
+          </span>
           <h3>Launch &amp; improve</h3>
           <p>I put things online early, listen to feedback, and keep improving step by step.</p>
-        </li>
-      </ul>
+        </article>
+      </div>
     </section>
 
     <!-- ============ Work ============ -->
     <section id="work" class="block">
-      <header class="head reveal">
-        <span class="numeral">III</span>
-        <div><p class="eyebrow">Selected work</p><h2>What I am building.</h2></div>
-      </header>
-      <article class="feature reveal" style="--d:.1s">
-        <p class="status"><span class="pulse"></span>In progress</p>
-        <h3>iConnecto</h3>
-        <p class="desc">A social app that helps people connect. My main project, built with AI and improved a little every week.</p>
-        <ul class="tags"><li>Social</li><li>Web</li><li>AI-assisted</li></ul>
-        <a class="btn solid" id="iconnectoLink" href="https://anisurrahmantanvi.github.io/iconnecto-website/about/" target="_blank" rel="noopener">Visit iConnecto <span aria-hidden="true">&rarr;</span></a>
+      <p class="eyebrow reveal">Work</p>
+      <h2 class="reveal" style="--d:.05s">What I am building.</h2>
+      <article class="feature card reveal" style="--d:.1s">
+        <div class="feature-text">
+          <p class="status"><span class="pulse"></span>In progress</p>
+          <h3>iConnecto</h3>
+          <p class="desc">A social app that helps people connect. My main project, built with AI and improved a little every week.</p>
+          <ul class="tags"><li>Social</li><li>Web</li><li>AI-assisted</li></ul>
+          <a class="btn solid" id="iconnectoLink" href="https://anisurrahmantanvi.github.io/iconnecto-website/about/" target="_blank" rel="noopener">Visit iConnecto <span aria-hidden="true">&rarr;</span></a>
+        </div>
+        <div class="feature-visual" aria-hidden="true">
+          <div class="mini">
+            <span class="app-logo big">iC</span>
+            <div class="bars"><b></b><b></b><b></b></div>
+          </div>
+        </div>
       </article>
     </section>
 
     <!-- ============ Process ============ -->
     <section id="process" class="block">
-      <header class="head reveal">
-        <span class="numeral">IV</span>
-        <div><p class="eyebrow">Process</p><h2>How I work.</h2></div>
-      </header>
+      <p class="eyebrow reveal">Process</p>
+      <h2 class="reveal" style="--d:.05s">How I work.</h2>
       <ol class="steps">
-        <li class="reveal" style="--d:.05s"><span class="idx">01</span><h3>Discover</h3><p>Understand the problem and the people who have it.</p></li>
-        <li class="reveal" style="--d:.12s"><span class="idx">02</span><h3>Design</h3><p>Sketch simple screens and a clear user flow.</p></li>
-        <li class="reveal" style="--d:.19s"><span class="idx">03</span><h3>Build</h3><p>Create a first working version with AI tools.</p></li>
-        <li class="reveal" style="--d:.26s"><span class="idx">04</span><h3>Evolve</h3><p>Launch, learn from feedback, and improve.</p></li>
+        <li class="reveal" style="--d:.05s"><span class="idx">1</span><h3>Discover</h3><p>Understand the problem and the people who have it.</p></li>
+        <li class="reveal" style="--d:.12s"><span class="idx">2</span><h3>Design</h3><p>Sketch simple screens and a clear user flow.</p></li>
+        <li class="reveal" style="--d:.19s"><span class="idx">3</span><h3>Build</h3><p>Create a first working version with AI tools.</p></li>
+        <li class="reveal" style="--d:.26s"><span class="idx">4</span><h3>Evolve</h3><p>Launch, learn from feedback, and improve.</p></li>
       </ol>
     </section>
 
     <!-- ============ Contact ============ -->
     <section id="contact" class="block contact">
-      <header class="head reveal">
-        <span class="numeral">V</span>
-        <div><p class="eyebrow">Contact</p><h2>Let us talk.</h2></div>
-      </header>
-      <p class="contact-lead reveal" style="--d:.05s">Have an idea, a question or just want to say hello? Send me a message.</p>
-      <form id="contactForm" class="reveal" style="--d:.12s">
-        <input type="text" id="name" placeholder="Your name" autocomplete="name" required />
-        <input type="email" id="email" placeholder="Your email" autocomplete="email" required />
-        <textarea id="message" rows="5" placeholder="Your message" required></textarea>
-        <button class="btn solid" type="submit">Send message</button>
-      </form>
-      <div class="links reveal" style="--d:.18s">
-        <a href="https://github.com/anisurrahmantanvi" target="_blank" rel="noopener">GitHub</a>
-        <a href="mailto:tanvibro@outlook.com">tanvibro@outlook.com</a>
+      <div class="contact-box reveal">
+        <p class="eyebrow">Contact</p>
+        <h2>Let's talk.</h2>
+        <p class="contact-lead">Have an idea, a question or just want to say hello? Send me a message.</p>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your name" autocomplete="name" required />
+          <input type="email" id="email" placeholder="Your email" autocomplete="email" required />
+          <textarea id="message" rows="4" placeholder="Your message" required></textarea>
+          <button class="btn solid" type="submit">Send message</button>
+        </form>
+        <div class="links">
+          <a href="https://github.com/anisurrahmantanvi" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:tanvibro@outlook.com">tanvibro@outlook.com</a>
+        </div>
       </div>
     </section>
   </main>
