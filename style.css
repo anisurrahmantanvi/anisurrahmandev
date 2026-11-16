@@ -47,7 +47,7 @@ ul, ol { list-style: none; }
   backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
 }
 .logo { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; white-space: nowrap; }
-.mark { width: 30px; height: 30px; border-radius: 9px; display: grid; place-items: center; font-size: .72rem; font-weight: 700; letter-spacing: .02em; background: var(--accent); color: var(--on-accent); }
+.mark { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; display: block; border: 2px solid var(--surface); box-shadow: 0 0 0 1.5px var(--accent); background: var(--surface-2); }
 .nav nav { display: flex; align-items: center; gap: clamp(12px, 2.6vw, 26px); margin-left: auto; }
 .nav nav a { font-size: .92rem; color: var(--muted); transition: color .2s; }
 .nav nav a:hover { color: var(--text); }
